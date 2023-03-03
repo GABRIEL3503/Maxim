@@ -446,9 +446,7 @@
       }
       
       .frontend {
-        margin-top: -75px;
-        margin-bottom: 24px;
-        height: 26vh;
+        height: 30vh;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -463,8 +461,15 @@
         position: relative;
       }
       
+      .containers:hover .upper {
+        animation: moveUp 1.5s ease-in-out 1;
+      }
+      
+      .containers:hover .lower {
+        animation: moveDown 1.5s ease-in-out 1;
+      }
+      
       .containers div {
-        color: #e6a037;
         position: absolute;
         left: 0;
         text-transform: uppercase;
@@ -473,16 +478,10 @@
         text-align:center;
       }
       
-      .containers .inside {
-        font-weight: 700;
-        font-size: 18px;
-        color: #135777;
-      }
-      
       .upper {
         top: 0;
         height: 52.5%;
-        color: #fff;
+        color: #ff6a00;
         overflow: hidden;
         z-index: 3;
         background-color: #ffffff;
@@ -491,7 +490,7 @@
       .lower {
         bottom: 0;
         height: 100%;
-        background: linear-gradient(180deg, #121212 52.5%, #fff 52.5%);
+        background: linear-gradient(1deg, #ff6a00 52.5%, #ffffff 52.5%);
         color: transparent;
         background-clip: text;
         -webkit-background-clip: text;
@@ -504,34 +503,30 @@
         transform: translateY(-40%);
         text-align: center;
         z-index: 2;
-        font-size: 1rem;
-        color: #dc143c;
-      }
-      
-      .containers:hover .upper {
-        animation: moveUp 2.5s ease-in-out 1;
-      }
-      
-      .containers:hover .lower {
-        animation: moveDown 2.5s ease-in-out 1;
+        font-size: 1.2rem;
+        color: #135777;
       }
       
       @keyframes moveUp {
-        0%, 100% {
+        0%,
+        100% {
           top: 0;
         }
       
-        50%, 70% {
+        50%,
+        70% {
           top: -45px;
         }
       }
       
       @keyframes moveDown {
-        0%, 100% {
+        0%,
+        100% {
           top: 0;
         }
       
-        50%, 70% {
+        50%,
+        70% {
           top: 30px;
         }
       }
@@ -541,8 +536,8 @@
           font-size: 2.5rem;
         }
       
-        .containers .inside {
-          font-size: 0.86rem;
+        .inside {
+          font-size: 0.75rem;
         }
       }
       
@@ -551,8 +546,7 @@
           font-size: 2rem;
         }
       
-        .containers .inside {
+        .inside {
           font-size: 0.5rem;
         }
       }
-      
