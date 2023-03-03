@@ -262,7 +262,7 @@ window.addEventListener('scroll', () => {
   const containerHeight = container.offsetHeight;
 
   if (scrollHeight > container.offsetTop - window.innerHeight + containerHeight) {
-    upper.style.animation = 'moveUp 5s ease-in-out 3';
-    lower.style.animation = 'moveDown 5s ease-in-out 3';
+    upper.style.animation = 'moveUp 5s ease-in-out 5';
+    lower.style.animation = 'moveDown 5s ease-in-out 5';
   }
 });
