@@ -252,3 +252,17 @@ window.addEventListener("scroll", () => {
   });
 
 })()
+
+const container = document.querySelector('.containers');
+const upper = document.querySelector('.upper');
+const lower = document.querySelector('.lower');
+
+window.addEventListener('scroll', () => {
+  const scrollHeight = window.pageYOffset;
+  const containerHeight = container.offsetHeight;
+
+  if (scrollHeight > container.offsetTop - window.innerHeight + containerHeight) {
+    upper.style.animation = 'moveUp 5s ease-in-out 3';
+    lower.style.animation = 'moveDown 5s ease-in-out 3';
+  }
+});

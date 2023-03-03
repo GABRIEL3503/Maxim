@@ -461,21 +461,13 @@
         position: relative;
       }
       
-      .containers:hover .upper {
-        animation: moveUp 1.5s ease-in-out 1;
-      }
-      
-      .containers:hover .lower {
-        animation: moveDown 1.5s ease-in-out 1;
-      }
-      
       .containers div {
         position: absolute;
         left: 0;
         text-transform: uppercase;
         width: 100%;
         display: block;
-        text-align:center;
+        text-align: center;
       }
       
       .upper {
@@ -485,6 +477,7 @@
         overflow: hidden;
         z-index: 3;
         background-color: #ffffff;
+        animation-iteration-count: infinite;
       }
       
       .lower {
@@ -495,6 +488,7 @@
         background-clip: text;
         -webkit-background-clip: text;
         z-index: 1;
+        animation-iteration-count: infinite;
       }
       
       .inside {
@@ -550,3 +544,4 @@
           font-size: 0.5rem;
         }
       }
+      
